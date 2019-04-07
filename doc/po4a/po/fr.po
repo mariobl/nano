@@ -1,0 +1,3650 @@
+# French translation of the nano man pages
+# Copyright (C) 2015 Free Software Foundation, Inc.
+# This file is distributed under the same license as the nano package.
+# Jean-Philippe Guérard <jean-philippe.guerard@corbeaunoir.org>, 2003, 2004, 2005, 2006 et 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: nano-docs\n"
+"POT-Creation-Date: 2019-04-04 22:46+0200\n"
+"PO-Revision-Date: 2015-03-02 22:10+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"Language-Team: French <traduc@traduc.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.3\n"
+
+#. type: TH
+#: ../nano.1:19
+#, no-wrap
+msgid "NANO"
+msgstr "NANO"
+
+#. type: TH
+#: ../nano.1:19 ../rnano.1:19 ../nanorc.5:19
+#, fuzzy, no-wrap
+#| msgid "version 2.3.7"
+msgid "version 4.0"
+msgstr "version 2.3.7"
+
+#. type: TH
+#: ../nano.1:19 ../rnano.1:19 ../nanorc.5:19
+#, no-wrap
+msgid "March 2019"
+msgstr ""
+
+#. type: SH
+#: ../nano.1:21 ../rnano.1:21 ../nanorc.5:21
+#, no-wrap
+msgid "NAME"
+msgstr "NOM"
+
+#. type: Plain text
+#: ../nano.1:23
+#, fuzzy
+#| msgid "nano - Nano's ANOther editor, an enhanced free Pico clone"
+msgid "nano - Nano's ANOther editor, inspired by Pico"
+msgstr "nano - NAno un NOuvel éditeur, un clone libre et amélioré de Pico"
+
+#. type: SH
+#: ../nano.1:24 ../rnano.1:24
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "SYNOPSIS"
+
+#. type: Plain text
+#: ../nano.1:27
+#, fuzzy
+#| msgid "B<nano> [I<options>] [[+I<line>,I<column>]\\ I<file>]..."
+msgid "B<nano> [I<options>] [[+I<line>[,I<column>]]\\ I<file>]..."
+msgstr "B<nano> [I<OPTIONS>] [[+I<LIGNE>,I<COLONNE>]\\ I<FICHIER>]..."
+
+#. type: SH
+#: ../nano.1:28 ../nanorc.5:24
+#, no-wrap
+msgid "NOTICE"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:33 ../nanorc.5:29
+msgid ""
+"Starting with version 4.0, B<nano> no longer hard-wraps an overlong line by "
+"default, and no longer automatically adds a newline at the end of the text "
+"if one is missing.  Furthermore, it uses smooth scrolling by default and "
+"makes use of the line below the title bar."
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:37
+msgid ""
+"If you want the old, Pico behavior back, you can use B<--breaklonglines>, "
+"B<--finalnewline>, B<--jumpyscrolling>, and B<--emptyline> (or B<-bfje> for "
+"short)."
+msgstr ""
+
+#. type: SH
+#: ../nano.1:38 ../rnano.1:28 ../nanorc.5:33
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "DESCRIPTION"
+
+#. type: Plain text
+#: ../nano.1:43
+msgid ""
+"B<nano> is a small and friendly editor.  It copies the look and feel of "
+"Pico, but is free software, and implements several features that Pico lacks, "
+"such as: opening multiple files, scrolling per line, undo/redo, syntax "
+"coloring, line numbering, and soft-wrapping overlong lines."
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:47
+msgid ""
+"When giving a filename on the command line, the cursor can be put on a "
+"specific line by adding the line number with a plus sign (B<+>) before the "
+"filename, and even in a specific column by adding it with a comma."
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:50
+msgid ""
+"As a special case: if instead of a filename a dash (B<->) is given, B<nano> "
+"will read data from standard input."
+msgstr ""
+
+#. type: SH
+#: ../nano.1:51
+#, no-wrap
+msgid "EDITING"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:60
+msgid ""
+"Entering text and moving around in a file is straightforward: typing the "
+"letters and using the normal cursor movement keys.  Commands are entered by "
+"using the Control (^) and the Alt or Meta (M-) keys.  Typing B<^K> deletes "
+"the current line and puts it in the cutbuffer.  Consecutive B<^K>s will put "
+"all deleted lines together in the cutbuffer.  Any cursor movement or "
+"executing any other command will cause the next B<^K> to overwrite the "
+"cutbuffer.  A B<^U> will paste the current contents of the cutbuffer at the "
+"current cursor position."
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:66
+msgid ""
+"When a more precise piece of text needs to be cut or copied, one can mark "
+"its start with B<^6>, move the cursor to its end (the marked text will be "
+"highlighted), and then use B<^K> to cut it, or B<M-6> to copy it to the "
+"cutbuffer.  One can also save the marked text to a file with B<^O>, or spell "
+"check it with B<^T>."
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:71
+msgid ""
+"On some terminals, text can be selected also by holding down Shift while "
+"using the arrow keys.  Holding down the Ctrl or Alt key too will increase "
+"the stride.  Any cursor movement without Shift being held will cancel such a "
+"selection."
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:76
+msgid ""
+"The two lines at the bottom of the screen show some important commands; the "
+"built-in help (B<^G>) lists all the available ones.  The default key "
+"bindings can be changed via a I<nanorc> file -- see B<nanorc>(5)."
+msgstr ""
+
+#. type: SH
+#: ../nano.1:77 ../rnano.1:45 ../nanorc.5:42
+#, no-wrap
+msgid "OPTIONS"
+msgstr "OPTIONS"
+
+#. type: TP
+#: ../nano.1:78
+#, no-wrap
+msgid "B<-A>, B<--smarthome>"
+msgstr "B<-A>, B<--smarthome>"
+
+#. type: Plain text
+#: ../nano.1:85 ../nanorc.5:261
+msgid ""
+"Make the Home key smarter.  When Home is pressed anywhere but at the very "
+"beginning of non-whitespace characters on a line, the cursor will jump to "
+"that beginning (either forwards or backwards).  If the cursor is already at "
+"that position, it will jump to the true beginning of the line."
+msgstr ""
+"Rend plus malin le fonctionnement de la touche «Début». Lorsque l'on appuie "
+"sur cette touche à n'importe quel endroit excepté au tout début du texte "
+"d'une ligne (i. e. au premier caractère non blanc), le curseur se "
+"positionnera au début du texte de la ligne (qu'il soit en avant ou en "
+"arrière). Si le curseur est déjà là, il se placera au vrai début de la ligne."
+
+#. type: TP
+#: ../nano.1:85
+#, no-wrap
+msgid "B<-B>, B<--backup>"
+msgstr "B<-B>, B<--backup>"
+
+#. type: Plain text
+#: ../nano.1:89
+#, fuzzy
+#| msgid ""
+#| "When saving a file, back up the previous version of it to the current "
+#| "filename suffixed with a tilde (B<~>)."
+msgid ""
+"When saving a file, back up the previous version of it, using the current "
+"filename suffixed with a tilde (B<~>)."
+msgstr ""
+"Lors de l'écriture d'un fichier, crée une copie de sécurité de la version "
+"précédente, en ajoutant un tilde (~) au nom du fichier."
+
+#. type: TP
+#: ../nano.1:89
+#, no-wrap
+msgid "B<-C\\ >I<directory>, B<--backupdir=>I<directory>"
+msgstr "B<-C\\ >I<répertoire>, B<--backupdir=>I<répertoire>"
+
+#. type: Plain text
+#: ../nano.1:94
+msgid ""
+"Make and keep not just one backup file, but make and keep a uniquely "
+"numbered one every time a file is saved -- when backups are enabled (B<-"
+"B>).  The uniquely numbered files are stored in the specified I<directory>."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:94
+#, no-wrap
+msgid "B<-D>, B<--boldtext>"
+msgstr "B<-D>, B<--boldtext>"
+
+#. type: Plain text
+#: ../nano.1:97
+msgid "Use bold text instead of reverse video text."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:97
+#, no-wrap
+msgid "B<-E>, B<--tabstospaces>"
+msgstr "B<-E>, B<--tabstospaces>"
+
+#. type: Plain text
+#: ../nano.1:100 ../nanorc.5:290
+msgid "Convert typed tabs to spaces."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:100
+#, no-wrap
+msgid "B<-F>, B<--multibuffer>"
+msgstr "B<-F>, B<--multibuffer>"
+
+#. type: Plain text
+#: ../nano.1:103
+msgid "Read a file into a new buffer by default."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:103
+#, no-wrap
+msgid "B<-G>, B<--locking>"
+msgstr "B<-G>, B<--locking>"
+
+#. type: Plain text
+#: ../nano.1:106
+msgid "Use vim-style file locking when editing files."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:106
+#, no-wrap
+msgid "B<-H>, B<--historylog>"
+msgstr "B<-H>, B<--historylog>"
+
+#. type: Plain text
+#: ../nano.1:110 ../nanorc.5:142
+msgid ""
+"Save the last hundred search strings and replacement strings and executed "
+"commands, so they can be easily reused in later sessions."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:110
+#, no-wrap
+msgid "B<-I>, B<--ignorercfiles>"
+msgstr "B<-I>, B<--ignorercfiles>"
+
+#. type: Plain text
+#: ../nano.1:113
+msgid "Don't look at the system's I<nanorc> nor at the user's I<nanorc>."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:113
+#, no-wrap
+msgid "B<-J\\ >I<number>, B<--guidestripe=>I<number>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:118
+msgid ""
+"Draw a vertical stripe at the given column, to help judge the width of the "
+"text.  (The color of the stripe can be changed with B<set stripecolor> in "
+"your I<nanorc> file.)"
+msgstr ""
+
+#. type: TP
+#: ../nano.1:118
+#, fuzzy, no-wrap
+#| msgid "B<-K>, B<--rebindkeypad>"
+msgid "B<-K>, B<--rawsequences>"
+msgstr "B<-K>, B<--rebindkeypad>"
+
+#. type: Plain text
+#: ../nano.1:124 ../nanorc.5:238
+msgid ""
+"Interpret escape sequences directly (instead of asking B<ncurses> to "
+"translate them).  If you need this option to get your keyboard to work "
+"properly, please report a bug.  Using this option disables B<nano>'s mouse "
+"support."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:124
+#, no-wrap
+msgid "B<-L>, B<--nonewlines>"
+msgstr "B<-L>, B<--nonewlines>"
+
+#. type: Plain text
+#: ../nano.1:128
+msgid ""
+"Don't automatically add a newline when a file does not end with one.  (This "
+"is the default.)"
+msgstr ""
+
+#. type: TP
+#: ../nano.1:128
+#, fuzzy, no-wrap
+#| msgid "B<-U>, B<--quickblank>"
+msgid "B<-M>, B<--trimblanks>"
+msgstr "B<-U>, B<--quickblank>"
+
+#. type: Plain text
+#: ../nano.1:132
+msgid ""
+"Snip trailing whitespace from the wrapped line when automatic hard-wrapping "
+"occurs or when text is justified."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:132
+#, no-wrap
+msgid "B<-N>, B<--noconvert>"
+msgstr "B<-N>, B<--noconvert>"
+
+#. type: Plain text
+#: ../nano.1:135
+msgid "Disable automatic conversion of files from DOS/Mac format."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:135
+#, no-wrap
+msgid "B<-O>, B<--morespace>"
+msgstr "B<-O>, B<--morespace>"
+
+#. type: Plain text
+#: ../nano.1:140
+msgid ""
+"Obsolete and ignored option, since the line below the title bar is included "
+"into the editing space by default.  If you prefer to keep this line blank, "
+"use B<-e> or B<--emptyline>."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:140
+#, fuzzy, no-wrap
+#| msgid "B<-P>, B<--poslog>"
+msgid "B<-P>, B<--positionlog>"
+msgstr "B<-P>, B<--poslog>"
+
+#. type: Plain text
+#: ../nano.1:144
+msgid ""
+"For the 200 most recent files, log the last position of the cursor, and "
+"place it at that position again upon reopening such a file."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:144
+#, no-wrap
+msgid "B<-Q \">I<regex>B<\">, B<--quotestr=\">I<regex>B<\">"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:151
+msgid ""
+"Set the regular expression for matching the quoting part of a line.  The "
+"default value is B<\"^([\\ \\et]*([!#%:;E<gt>|}]|//|--))+\">.  (Note that B<"
+"\\et> stands for an actual Tab.)  This makes it possible to rejustify blocks "
+"of quoted text when composing email, and to rewrap blocks of line comments "
+"when writing source code."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:151
+#, no-wrap
+msgid "B<-R>, B<--restricted>"
+msgstr "B<-R>, B<--restricted>"
+
+#. type: Plain text
+#: ../nano.1:160
+msgid ""
+"Restricted mode: don't read or write to any file not specified on the "
+"command line.  This means: don't read or write history files; don't allow "
+"suspending; don't allow spell checking; don't allow a file to be appended "
+"to, prepended to, or saved under a different name if it already has one; and "
+"don't make backup files.  Restricted mode can also be activated by invoking "
+"B<nano> with any name beginning with 'r' (e.g. \"rnano\")."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:160
+#, no-wrap
+msgid "B<-S>, B<--smooth>"
+msgstr "B<-S>, B<--smooth>"
+
+#. type: Plain text
+#: ../nano.1:165
+msgid ""
+"Obsolete and ignored option, since smooth scrolling has become the default.  "
+"If you prefer the chunk-by-chunk scrolling behavior, use B<-j> or B<--"
+"jumpyscrolling>."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:165
+#, no-wrap
+msgid "B<-T\\ >I<number>, B<--tabsize=>I<number>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:169
+msgid ""
+"Set the size (width) of a tab to I<number> columns.  The value of I<number> "
+"must be greater than 0.  The default value is 8."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:169
+#, no-wrap
+msgid "B<-U>, B<--quickblank>"
+msgstr "B<-U>, B<--quickblank>"
+
+#. type: Plain text
+#: ../nano.1:174
+msgid ""
+"Do quick status-bar blanking: status-bar messages will disappear after 1 "
+"keystroke instead of 25.  Note that option B<-c> (B<--constantshow>)  "
+"overrides this."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:174
+#, no-wrap
+msgid "B<-V>, B<--version>"
+msgstr "B<-V>, B<--version>"
+
+#. type: Plain text
+#: ../nano.1:177
+msgid "Show the current version number and exit."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:177
+#, no-wrap
+msgid "B<-W>, B<--wordbounds>"
+msgstr "B<-W>, B<--wordbounds>"
+
+#. type: Plain text
+#: ../nano.1:181
+msgid ""
+"Detect word boundaries differently by treating punctuation characters as "
+"part of a word."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:181
+#, no-wrap
+msgid "B<-X \">I<characters>B<\">, B<--wordchars=\">I<characters>B<\">"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:186
+msgid ""
+"Specify which other characters (besides the normal alphanumeric ones)  "
+"should be considered as part of a word.  This overrides option B<-W> (B<--"
+"wordbounds>)."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:186
+#, no-wrap
+msgid "B<-Y\\ >I<name>, B<--syntax=>I<name>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:190
+msgid ""
+"Specify the name of the syntax highlighting to use from among the ones "
+"defined in the I<nanorc> files."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:190
+#, fuzzy, no-wrap
+#| msgid "B<-B>, B<--backup>"
+msgid "B<-Z>, B<--zap>"
+msgstr "B<-B>, B<--backup>"
+
+#. type: Plain text
+#: ../nano.1:194 ../nanorc.5:334
+msgid ""
+"Let an unmodified Backspace or Delete erase the marked region (instead of a "
+"single character, and without affecting the cutbuffer)."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:194
+#, fuzzy, no-wrap
+#| msgid "B<-U>, B<--quickblank>"
+msgid "B<-a>, B<--atblanks>"
+msgstr "B<-U>, B<--quickblank>"
+
+#. type: Plain text
+#: ../nano.1:198
+msgid ""
+"When doing soft line wrapping, wrap lines at whitespace instead of always at "
+"the edge of the screen."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:198
+#, fuzzy, no-wrap
+#| msgid "B<-L>, B<--nonewlines>"
+msgid "B<-b>, B<--breaklonglines>"
+msgstr "B<-L>, B<--nonewlines>"
+
+#. type: Plain text
+#: ../nano.1:203
+msgid ""
+"Automatically hard-wrap the current line when it becomes overlong.  (This "
+"option is the opposite of B<-w> (B<--nowrap>) -- the last one given takes "
+"effect.)"
+msgstr ""
+
+#. type: TP
+#: ../nano.1:203
+#, fuzzy, no-wrap
+#| msgid "B<-A>, B<--smarthome>"
+msgid "B<-c>, B<--constantshow>"
+msgstr "B<-A>, B<--smarthome>"
+
+#. type: Plain text
+#: ../nano.1:207
+msgid ""
+"Constantly show the cursor position on the status bar.  Note that this "
+"overrides option B<-U> (B<--quickblank>)."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:207
+#, no-wrap
+msgid "B<-d>, B<--rebinddelete>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:212 ../nanorc.5:243
+msgid ""
+"Interpret the Delete and Backspace keys differently so that both Backspace "
+"and Delete work properly.  You should only use this option when on your "
+"system either Backspace acts like Delete or Delete acts like Backspace."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:212
+#, fuzzy, no-wrap
+#| msgid "B<-L>, B<--nonewlines>"
+msgid "B<-e>, B<--emptyline>"
+msgstr "B<-L>, B<--nonewlines>"
+
+#. type: Plain text
+#: ../nano.1:215 ../nanorc.5:119
+msgid "Do not use the line below the title bar, leaving it entirely blank."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:215
+#, fuzzy, no-wrap
+#| msgid "B<-L>, B<--nonewlines>"
+msgid "B<-f>, B<--finalnewline>"
+msgstr "B<-L>, B<--nonewlines>"
+
+#. type: Plain text
+#: ../nano.1:220
+msgid ""
+"If the buffer is not empty, ensure that it ends with a newline character.  "
+"(This option is the opposite of B<-L> (B<--nonewlines>) -- the last one "
+"given takes effect.)"
+msgstr ""
+
+#. type: TP
+#: ../nano.1:220
+#, fuzzy, no-wrap
+#| msgid "B<-S>, B<--smooth>"
+msgid "B<-g>, B<--showcursor>"
+msgstr "B<-S>, B<--smooth>"
+
+#. type: Plain text
+#: ../nano.1:225
+msgid ""
+"Make the cursor visible in the file browser (putting it on the highlighted "
+"item) and in the help viewer.  Useful for braille users and people with poor "
+"vision."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:225 ../rnano.1:46
+#, no-wrap
+msgid "B<-h>, B<--help>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:228
+msgid "Show a summary of the available command-line options and exit."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:228
+#, no-wrap
+msgid "B<-i>, B<--autoindent>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:233 ../nanorc.5:81
+msgid ""
+"Automatically indent a newly created line to the same number of tabs and/or "
+"spaces as the previous line (or as the next line if the previous line is the "
+"beginning of a paragraph)."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:233
+#, fuzzy, no-wrap
+#| msgid "B<-P>, B<--poslog>"
+msgid "B<-j>, B<--jumpyscrolling>"
+msgstr "B<-P>, B<--poslog>"
+
+#. type: Plain text
+#: ../nano.1:236 ../nanorc.5:145
+msgid "Scroll the buffer contents per half-screen instead of per line."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:236
+#, fuzzy, no-wrap
+#| msgid "B<-N>, B<--noconvert>"
+msgid "B<-k>, B<--cutfromcursor>"
+msgstr "B<-N>, B<--noconvert>"
+
+#. type: Plain text
+#: ../nano.1:240
+msgid ""
+"Make the 'Cut Text' command (normally B<^K>) cut from the current cursor "
+"position to the end of the line, instead of cutting the entire line."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:240
+#, fuzzy, no-wrap
+#| msgid "B<-L>, B<--nonewlines>"
+msgid "B<-l>, B<--linenumbers>"
+msgstr "B<-L>, B<--nonewlines>"
+
+#. type: Plain text
+#: ../nano.1:243 ../nanorc.5:153
+msgid "Display line numbers to the left of the text area."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:243
+#, no-wrap
+msgid "B<-m>, B<--mouse>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:250 ../nanorc.5:177
+msgid ""
+"Enable mouse support, if available for your system.  When enabled, mouse "
+"clicks can be used to place the cursor, set the mark (with a double click), "
+"and execute shortcuts.  The mouse will work in the X Window System, and on "
+"the console when gpm is running.  Text can still be selected through "
+"dragging by holding down the Shift key."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:250
+#, no-wrap
+msgid "B<-n>, B<--noread>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:257
+msgid ""
+"Treat any name given on the command line as a new file.  This allows B<nano> "
+"to write to named pipes: it will start with a blank buffer, and will write "
+"to the pipe when the user saves the \"file\".  This way B<nano> can be used "
+"as an editor in combination with for instance B<gpg> without having to write "
+"sensitive data to disk first."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:257
+#, no-wrap
+msgid "B<-o\\ >I<directory>, B<--operatingdir=>I<directory>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:261
+msgid ""
+"Set the operating directory.  This makes B<nano> set up something similar to "
+"a chroot."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:261
+#, no-wrap
+msgid "B<-p>, B<--preserve>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:265
+msgid ""
+"Preserve the XON and XOFF sequences (^Q and ^S) so they will be caught by "
+"the terminal."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:265
+#, no-wrap
+msgid "B<-r\\ >I<number>, B<--fill=>I<number>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:272 ../nanorc.5:133
+msgid ""
+"Set the target width for justifying and automatic hard-wrapping at this "
+"I<number> of columns.  If the value is 0 or less, wrapping will occur at the "
+"width of the screen minus I<number> columns, allowing the wrap point to vary "
+"along with the width of the screen if the screen is resized.  The default "
+"value is -8."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:272
+#, no-wrap
+msgid "B<-s\\ >I<program>, B<--speller=>I<program>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:275
+msgid "Use this alternative spell checker command."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:275
+#, no-wrap
+msgid "B<-t>, B<--tempfile>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:278
+msgid "Save a changed buffer without prompting (when exiting with B<^X>)."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:278
+#, fuzzy, no-wrap
+#| msgid "B<-B>, B<--backup>"
+msgid "B<-u>, B<--unix>"
+msgstr "B<-B>, B<--backup>"
+
+#. type: Plain text
+#: ../nano.1:283
+msgid ""
+"Save a file by default in Unix format.  This overrides nano's default "
+"behavior of saving a file in the format that it had.  (This option has no "
+"effect when you also use B<--noconvert>.)"
+msgstr ""
+
+#. type: TP
+#: ../nano.1:283
+#, no-wrap
+msgid "B<-v>, B<--view>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:288
+msgid ""
+"Just view the file and disallow editing: read-only mode.  This mode allows "
+"the user to open also other files for viewing, unless B<--restricted> is "
+"given too."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:288
+#, no-wrap
+msgid "B<-w>, B<--nowrap>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:292
+msgid ""
+"Do not automatically hard-wrap the current line when it becomes overlong.  "
+"(This is the default.)"
+msgstr ""
+
+#. type: TP
+#: ../nano.1:292
+#, no-wrap
+msgid "B<-x>, B<--nohelp>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:295
+msgid "Don't show the two help lines at the bottom of the screen."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:295
+#, fuzzy, no-wrap
+#| msgid "B<-V>, B<--version>"
+msgid "B<-y>, B<--afterends>"
+msgstr "B<-V>, B<--version>"
+
+#. type: Plain text
+#: ../nano.1:298 ../nanorc.5:67
+msgid "Make Ctrl+Right stop at word ends instead of beginnings."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:298
+#, no-wrap
+msgid "B<-z>, B<--suspend>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:301
+msgid "Enable the suspend ability."
+msgstr ""
+
+#. type: TP
+#: ../nano.1:301
+#, no-wrap
+msgid "B<-$>, B<--softwrap>"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:309
+msgid ""
+"Enable 'soft wrapping'.  This will make B<nano> attempt to display the "
+"entire contents of any line, even if it is longer than the screen width, by "
+"continuing it over multiple screen lines.  Since \\&'$' normally refers to a "
+"variable in the Unix shell, you should specify this option last when using "
+"other options (e.g.\\& 'nano -wS$') or pass it separately (e.g.\\& 'nano -wS "
+"-$')."
+msgstr ""
+
+#. type: SH
+#: ../nano.1:310
+#, no-wrap
+msgid "TOGGLES"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:317
+msgid ""
+"Several of the above options can be switched on and off also while B<nano> "
+"is running.  For example, B<M-L> toggles the hard-wrapping of long lines, "
+"B<M-$> toggles soft-wrapping, B<M-#> toggles line numbers, B<M-M> toggles "
+"the mouse, B<M-I> auto-indentation, and B<M-X> the help lines.  See at the "
+"end of the B<^G> help text for a complete list."
+msgstr ""
+
+#. type: SH
+#: ../nano.1:318 ../nanorc.5:874
+#, no-wrap
+msgid "FILES"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:325
+msgid ""
+"B<nano> will read two configuration files: first the system's I<nanorc> (if "
+"it exists), and then the user's I<nanorc> (if it exists), either I<~/."
+"nanorc> or I<$XDG_CONFIG_HOME/nano/nanorc> or I<~/.config/nano/nanorc>, "
+"whichever is encountered first.  See B<nanorc>(5)  for more information on "
+"the possible contents of those files."
+msgstr ""
+
+#. type: SH
+#: ../nano.1:326
+#, no-wrap
+msgid "NOTES"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:330
+msgid ""
+"If no alternative spell checker command is specified on the command line nor "
+"in one of the I<nanorc> files, B<nano> will check the B<SPELL> environment "
+"variable for one."
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:340
+msgid ""
+"In some cases B<nano> will try to dump the buffer into an emergency file.  "
+"This will happen mainly if B<nano> receives a SIGHUP or SIGTERM or runs out "
+"of memory.  It will write the buffer into a file named I<nano.save> if the "
+"buffer didn't have a name already, or will add a \".save\" suffix to the "
+"current filename.  If an emergency file with that name already exists in the "
+"current directory, it will add \".save\" plus a number (e.g.\\& \".save.1\") "
+"to the current filename in order to make it unique.  In multibuffer mode, "
+"B<nano> will write all the open buffers to their respective emergency files."
+msgstr ""
+
+#. type: SH
+#: ../nano.1:341 ../rnano.1:52
+#, no-wrap
+msgid "BUGS"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:345
+msgid ""
+"The recording and playback of keyboard macros works correctly only on a "
+"terminal emulator, not on a Linux console (VT), because the latter does not "
+"by default distinguish modified from unmodified arrow keys."
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:347
+msgid "Please report any other bugs that you encounter via:"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:349
+msgid "I<https://savannah.gnu.org/bugs/?group=nano>."
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:353
+msgid ""
+"When nano crashes, it will save any modified buffers to emergency .save "
+"files.  If you are able to reproduce the crash and you want to get a "
+"backtrace, define the environment variable B<NANO_NOCATCH>."
+msgstr ""
+
+#. type: SH
+#: ../nano.1:354 ../rnano.1:56
+#, no-wrap
+msgid "HOMEPAGE"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:356 ../rnano.1:58
+msgid "I<https://nano-editor.org/>"
+msgstr ""
+
+#. type: SH
+#: ../nano.1:357 ../rnano.1:59 ../nanorc.5:882
+#, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:359
+msgid "B<nanorc>(5)"
+msgstr ""
+
+#. type: Plain text
+#: ../nano.1:360
+msgid "I</usr/share/doc/nano/> (or equivalent on your system)"
+msgstr ""
+
+#. type: TH
+#: ../rnano.1:19
+#, no-wrap
+msgid "RNANO"
+msgstr ""
+
+#. type: Plain text
+#: ../rnano.1:23
+msgid "rnano - a restricted nano"
+msgstr ""
+
+#. type: Plain text
+#: ../rnano.1:27
+#, fuzzy
+#| msgid "B<nano> [I<options>] [[+I<line>,I<column>]\\ I<file>]..."
+msgid "B<rnano> [I<options>] [[+I<line>[,I<column>]]\\ I<file>]..."
+msgstr "B<nano> [I<OPTIONS>] [[+I<LIGNE>,I<COLONNE>]\\ I<FICHIER>]..."
+
+#. type: Plain text
+#: ../rnano.1:32
+msgid ""
+"B<rnano> runs the B<nano> editor in restricted mode.  This allows editing "
+"only the specified file or files, and doesn't allow the user access to the "
+"filesystem nor to a command shell."
+msgstr ""
+
+#. type: Plain text
+#: ../rnano.1:34
+msgid "In restricted mode, B<nano> will:"
+msgstr ""
+
+#. type: IP
+#: ../rnano.1:34 ../rnano.1:36 ../rnano.1:38 ../rnano.1:40 ../rnano.1:42
+#, no-wrap
+msgid "\\[bu]"
+msgstr ""
+
+#. type: Plain text
+#: ../rnano.1:36
+msgid "not allow suspending;"
+msgstr ""
+
+#. type: Plain text
+#: ../rnano.1:38
+msgid "not allow saving the current buffer under a different name;"
+msgstr ""
+
+#. type: Plain text
+#: ../rnano.1:40
+msgid "not allow inserting another file or opening a new buffer;"
+msgstr ""
+
+#. type: Plain text
+#: ../rnano.1:42
+msgid "not allow appending or prepending to any file;"
+msgstr ""
+
+#. type: Plain text
+#: ../rnano.1:44
+msgid "not make backup files nor do spell checking."
+msgstr ""
+
+#. type: Plain text
+#: ../rnano.1:49
+msgid "Show the available command-line options and exit."
+msgstr ""
+
+#. type: Plain text
+#: ../rnano.1:51
+msgid "For all existing options, see the B<nano>(1) man page."
+msgstr ""
+
+#. type: Plain text
+#: ../rnano.1:55
+msgid "Please report bugs via I<https://savannah.gnu.org/bugs/?group=nano>."
+msgstr ""
+
+#. type: Plain text
+#: ../rnano.1:60 ../nanorc.5:883
+msgid "B<nano>(1)"
+msgstr "B<nano>(1)"
+
+#. type: TH
+#: ../nanorc.5:19
+#, no-wrap
+msgid "NANORC"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:23
+msgid "nanorc - GNU nano's configuration file"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:32
+msgid ""
+"If you want the old, Pico behavior back, you can use B<set breaklonglines>, "
+"B<set finalnewline>, B<set jumpyscrolling>, and B<set emptyline>."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:41
+msgid ""
+"The I<nanorc> file contains the default settings for B<nano>, a small and "
+"friendly editor.  The file should be in Unix format, not in DOS or Mac "
+"format.  During startup, B<nano> will first read the system-wide settings, "
+"from I</etc/nanorc> (the exact path might be different on your system), and "
+"then the user-specific settings, either from I<~/.nanorc> or from I<"
+"$XDG_CONFIG_HOME/nano/nanorc> or from I<~/.config/nano/nanorc>, whichever is "
+"encountered first."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:48
+msgid ""
+"The configuration file accepts a series of B<set> and B<unset> commands, "
+"which can be used to configure nano on startup without using command-line "
+"options.  Additionally, there are some commands to define syntax "
+"highlighting and to rebind keys -- see the two separate sections on those.  "
+"B<nano> reads one command per line."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:55
+msgid ""
+"Options in I<nanorc> files take precedence over nano's defaults, and command-"
+"line options override I<nanorc> settings.  Also, options that do not take an "
+"argument are unset by default.  So using the B<unset> command is only needed "
+"when wanting to override a setting of the system's I<nanorc> file in your "
+"own I<nanorc>.  Options that take an argument cannot be unset."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:61
+msgid ""
+"Below, the I<string> parameters need to be enclosed in double quotes.  "
+"Quotes inside these string parameters don't have to be escaped with "
+"backslashes.  The last double quote in the string will be treated as its "
+"end.  For example, for the B<brackets> option, \"B<\"')E<gt>]}>\" will match "
+"B<\">, B<'>, B<)>, B<E<gt>>, B<]>, and B<}>."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:63
+msgid "The supported commands and arguments are:"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:64
+#, no-wrap
+msgid "B<set afterends>"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:67
+#, no-wrap
+msgid "B<set allow_insecure_backup>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:72
+msgid ""
+"When backing up files, allow the backup to succeed even if its permissions "
+"can't be (re)set due to special OS considerations.  You should NOT enable "
+"this option unless you are sure you need it."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:72
+#, no-wrap
+msgid "B<set atblanks>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:76
+msgid ""
+"When soft line wrapping is enabled, make it wrap lines at blank characters "
+"(tabs and spaces) instead of always at the edge of the screen."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:76
+#, no-wrap
+msgid "B<set autoindent>"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:81
+#, no-wrap
+msgid "B<set backup>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:85
+msgid ""
+"When saving a file, create a backup file by adding a tilde (B<~>) to the "
+"file's name."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:85
+#, no-wrap
+msgid "B<set backupdir >I<directory>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:91
+msgid ""
+"Make and keep not just one backup file, but make and keep a uniquely "
+"numbered one every time a file is saved -- when backups are enabled with "
+"B<set backup> or B<--backup> or B<-B>.  The uniquely numbered files are "
+"stored in the specified I<directory>."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:91
+#, no-wrap
+msgid "B<set boldtext>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:97
+msgid ""
+"Use bold instead of reverse video for the title bar, status bar, key combos, "
+"function tags, line numbers, and selected text.  This can be overridden by "
+"setting the options B<titlecolor>, B<statuscolor>, B<keycolor>, "
+"B<functioncolor>, B<numbercolor>, and B<selectedcolor>."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:97
+#, no-wrap
+msgid "B<set brackets >I<string>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:103
+msgid ""
+"Set the characters treated as closing brackets when justifying paragraphs.  "
+"This may not include blank characters.  Only closing punctuation (see B<set "
+"punct>), optionally followed by the specified closing brackets, can end "
+"sentences.  The default value is \"B<\"')E<gt>]}>\"."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:103
+#, no-wrap
+msgid "B<set breaklonglines>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:106
+msgid "Automatically hard-wrap the current line when it becomes overlong."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:106
+#, no-wrap
+msgid "B<set casesensitive>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:109
+msgid "Do case-sensitive searches by default."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:109
+#, no-wrap
+msgid "B<set constantshow>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:113
+msgid ""
+"Constantly display the cursor position in the status bar.  This overrides "
+"the option B<quickblank>."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:113
+#, no-wrap
+msgid "B<set cutfromcursor>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:116
+msgid ""
+"Use cut-from-cursor-to-end-of-line by default, instead of cutting the whole "
+"line."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:116
+#, no-wrap
+msgid "B<set emptyline>"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:119
+#, no-wrap
+msgid "B<set errorcolor >I<fgcolor>,I<bgcolor>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:123
+msgid ""
+"Use this color combination for the status bar when an error message is "
+"displayed.  See B<set titlecolor> for valid color names."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:123
+#, no-wrap
+msgid "B<set finalnewline>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:126
+msgid ""
+"If the buffer is not empty, ensure that it ends with a newline character."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:126
+#, no-wrap
+msgid "B<set fill >I<number>"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:133
+#, no-wrap
+msgid "B<set functioncolor >I<fgcolor>,I<bgcolor>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:138
+msgid ""
+"Specify the color combination to use for the function descriptions in the "
+"two help lines at the bottom of the screen.  See B<set titlecolor> for more "
+"details."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:138
+#, no-wrap
+msgid "B<set historylog>"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:142
+#, no-wrap
+msgid "B<set jumpyscrolling>"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:145
+#, no-wrap
+msgid "B<set keycolor >I<fgcolor>,I<bgcolor>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:150
+msgid ""
+"Specify the color combination to use for the shortcut key combos in the two "
+"help lines at the bottom of the screen.  See B<set titlecolor> for more "
+"details."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:150
+#, no-wrap
+msgid "B<set linenumbers>"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:153
+#, no-wrap
+msgid "B<set locking>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:156
+msgid "Enable vim-style lock-files for when editing files."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:156
+#, no-wrap
+msgid "B<set guidestripe >I<number>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:160
+msgid ""
+"Draw a vertical stripe at the given column, to help judge the width of the "
+"text.  (The color of the stripe can be changed with B<set stripecolor>.)"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:160
+#, no-wrap
+msgid "B<set matchbrackets >I<string>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:166
+msgid ""
+"Set the opening and closing brackets that can be found by bracket searches.  "
+"This may not include blank characters.  The opening set must come before the "
+"closing set, and the two sets must be in the same order.  The default value "
+"is \"B<(E<lt>[{)E<gt>]}>\"."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:166
+#, no-wrap
+msgid "B<set morespace>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:170
+msgid ""
+"Deprecated option since it has become the default setting.  When needed, use "
+"B<unset emptyline> instead."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:170
+#, no-wrap
+msgid "B<set mouse>"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:177
+#, no-wrap
+msgid "B<set multibuffer>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:180
+msgid "When reading in a file with ^R, insert it into a new buffer by default."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:180
+#, no-wrap
+msgid "B<set noconvert>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:183
+msgid "Don't convert files from DOS/Mac format."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:183
+#, no-wrap
+msgid "B<set nohelp>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:186
+msgid "Don't display the two help lines at the bottom of the screen."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:186
+#, no-wrap
+msgid "B<set nonewlines>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:190
+msgid ""
+"Deprecated option since it has become the default setting.  When needed, use "
+"B<unset finalnewline> instead."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:190
+#, no-wrap
+msgid "B<set nopauses>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:194
+msgid ""
+"Don't pause between warnings at startup.  This means that only the last one "
+"will be visible (when there are multiple ones)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:194
+#, no-wrap
+msgid "B<set nowrap>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:198
+msgid ""
+"Deprecated option since it has become the default setting.  When needed, use "
+"B<unset breaklonglines> instead."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:198
+#, no-wrap
+msgid "B<set numbercolor >I<fgcolor>,I<bgcolor>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:202
+msgid ""
+"Specify the color combination to use for line numbers.  See B<set "
+"titlecolor> for more details."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:202
+#, no-wrap
+msgid "B<set operatingdir >I<directory>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:208
+msgid ""
+"B<nano> will only read and write files inside I<directory> and its "
+"subdirectories.  Also, the current directory is changed to here, so files "
+"are inserted from this directory.  By default, the operating directory "
+"feature is turned off."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:208
+#, no-wrap
+msgid "B<set positionlog>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:212
+msgid ""
+"Save the cursor position of files between editing sessions.  The cursor "
+"position is remembered for the 200 most-recently edited files."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:212
+#, no-wrap
+msgid "B<set preserve>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:215
+msgid "Preserve the XON and XOFF keys (^Q and ^S)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:215
+#, no-wrap
+msgid "B<set punct >I<string>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:221
+msgid ""
+"Set the characters treated as closing punctuation when justifying "
+"paragraphs.  This may not include blank characters.  Only the specfified "
+"closing punctuation, optionally followed by closing brackets (see "
+"B<brackets>), can end sentences.  The default value is \"B<!.?>\"."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:221
+#, no-wrap
+msgid "B<set quickblank>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:225
+msgid ""
+"Do quick status-bar blanking: status-bar messages will disappear after 1 "
+"keystroke instead of 25.  The option B<constantshow> overrides this."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:225
+#, no-wrap
+msgid "B<set quotestr >I<regex>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:232
+msgid ""
+"Set the regular expression for matching the quoting part of a line.  The "
+"default value is \"B<^([\\ \\et]*([!#%:;E<gt>|}]|//|--))+>\".  (Note that B<"
+"\\et> stands for an actual Tab character.)  This makes it possible to "
+"rejustify blocks of quoted text when composing email, and to rewrap blocks "
+"of line comments when writing source code."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:232
+#, no-wrap
+msgid "B<set rawsequences>"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:238
+#, no-wrap
+msgid "B<set rebinddelete>"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:243
+#, no-wrap
+msgid "B<set regexp>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:246
+msgid "Do extended regular expression searches by default."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:246
+#, no-wrap
+msgid "B<set selectedcolor >I<fgcolor>,I<bgcolor>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:250
+msgid ""
+"Specify the color combination to use for selected text.  See B<set "
+"titlecolor> for more details."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:250
+#, no-wrap
+msgid "B<set showcursor>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:254
+msgid ""
+"Put the cursor on the highlighted item in the file browser, to aid braille "
+"users."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:254
+#, no-wrap
+msgid "B<set smarthome>"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:261
+#, no-wrap
+msgid "B<set smooth>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:265
+msgid ""
+"Deprecated option since it has become the default setting.  When needed, use "
+"B<unset jumpyscrolling> instead."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:265
+#, no-wrap
+msgid "B<set softwrap>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:268
+msgid "Enable soft line wrapping for easier viewing of very long lines."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:268
+#, no-wrap
+msgid "B<set speller >I<program>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:272
+msgid ""
+"Use the given I<program> to do spell checking and correcting, instead of the "
+"built-in corrector that calls B<spell>."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:272
+#, no-wrap
+msgid "B<set statuscolor >I<fgcolor>,I<bgcolor>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:276
+msgid ""
+"Specify the color combination to use for the status bar.  See B<set "
+"titlecolor> for more details."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:276
+#, no-wrap
+msgid "B<set stripecolor >I<fgcolor>,I<bgcolor>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:280
+msgid ""
+"Specify the color combination to use for the vertical guiding stripe.  See "
+"B<set titlecolor> for more details."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:280
+#, no-wrap
+msgid "B<set suspend>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:283
+msgid "Allow B<nano> to be suspended."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:283
+#, no-wrap
+msgid "B<set tabsize >I<number>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:287
+msgid ""
+"Use a tab size of I<number> columns.  The value of I<number> must be greater "
+"than 0.  The default value is B<8>."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:287
+#, no-wrap
+msgid "B<set tabstospaces>"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:290
+#, no-wrap
+msgid "B<set tempfile>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:293
+msgid "Save automatically on exit, don't prompt."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:293
+#, no-wrap
+msgid "B<set titlecolor >I<fgcolor>,I<bgcolor>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:302
+msgid ""
+"Specify the color combination to use for the title bar.  Valid names for the "
+"foreground and background colors are: B<white>, B<black>, B<blue>, B<green>, "
+"B<red>, B<cyan>, B<yellow>, B<magenta>, and B<normal> -- where B<normal> "
+"means the default foreground or background color.  The name of the "
+"foreground color may be prefixed with B<bright>.  And either \"I<fgcolor>\" "
+"or \",I<bgcolor>\" may be left out."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:302
+#, no-wrap
+msgid "B<set trimblanks>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:306
+msgid ""
+"Remove trailing whitespace from wrapped lines when automatic hard-wrapping "
+"occurs or when text is justified."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:306
+#, no-wrap
+msgid "B<set unix>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:311
+msgid ""
+"Save a file by default in Unix format.  This overrides nano's default "
+"behavior of saving a file in the format that it had.  (This option has no "
+"effect when you also use B<set noconvert>.)"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:311
+#, no-wrap
+msgid "B<set view>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:316
+msgid ""
+"Disallow file modification: read-only mode.  This mode allows the user to "
+"open also other files for viewing, unless B<--restricted> is given on the "
+"command line."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:316
+#, no-wrap
+msgid "B<set whitespace >I<string>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:321
+msgid ""
+"Set the two characters used to indicate the presence of tabs and spaces.  "
+"They must be single-column characters.  The default pair for a UTF-8 locale "
+"is \"B<\\[Fc]\\[md]>\", and for other locales \"B<E<gt>.>\"."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:321
+#, no-wrap
+msgid "B<set wordbounds>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:325
+msgid ""
+"Detect word boundaries differently by treating punctuation characters as "
+"parts of words."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:325
+#, no-wrap
+msgid "B<set wordchars >I<string>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:330
+msgid ""
+"Specify which other characters (besides the normal alphanumeric ones)  "
+"should be considered as parts of words.  This overrides the option "
+"B<wordbounds>."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:330
+#, no-wrap
+msgid "B<set zap>"
+msgstr ""
+
+#. type: SH
+#: ../nanorc.5:335
+#, no-wrap
+msgid "SYNTAX HIGHLIGHTING"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:342
+msgid ""
+"Coloring the different syntactic elements of a file is done via regular "
+"expressions (see the B<color> command below).  This is inherently imperfect, "
+"because regular expressions are not powerful enough to fully parse a file.  "
+"Nevertheless, regular expressions can do a lot and are easy to make, so they "
+"are a good fit for a small editor like B<nano>."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:345
+msgid ""
+"For each kind of file a separate syntax can be defined via the following "
+"commands:"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:345
+#, no-wrap
+msgid "B<syntax>I< name >[B<\">I<fileregex>B<\" >...]"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:351
+msgid ""
+"Start the definition of a syntax with this I<name>.  All subsequent B<color> "
+"and other such commands will be added to this syntax, until a new B<syntax> "
+"command is encountered."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:357
+msgid ""
+"When B<nano> is run, this syntax will be automatically activated if the "
+"current filename matches the extended regular expression I<fileregex>.  Or "
+"the syntax can be explicitly activated by using the B<-Y> or B<--syntax> "
+"command-line option followed by the I<name>."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:362
+msgid ""
+"The syntax B<default> is special: it takes no I<fileregex>, and applies to "
+"files that don't match any syntax's regexes.  The syntax B<none> is "
+"reserved; specifying it on the command line is the same as not having a "
+"syntax at all."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:362
+#, no-wrap
+msgid "B<header \">I<regex>B<\" >..."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:367
+msgid ""
+"If from all defined syntaxes no I<fileregex> matched, then compare this "
+"I<regex> (or regexes) against the first line of the current file, to "
+"determine whether this syntax should be used for it."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:367
+#, no-wrap
+msgid "B<magic \">I<regex>B<\" >..."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:375
+msgid ""
+"If no I<fileregex> matched and no B<header> regex matched either, then "
+"compare this I<regex> (or regexes) against the result of querying the "
+"B<magic> database about the current file, to determine whether this syntax "
+"should be used for it.  (This functionality only works when B<libmagic> is "
+"installed on the system and will be silently ignored otherwise.)"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:375
+#, no-wrap
+msgid "B<linter>I< program >[I<arg >...]"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:378
+msgid "Use the given I<program> to run a syntax check on the current buffer."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:378
+#, no-wrap
+msgid "B<comment \">I<string>B<\">"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:389
+msgid ""
+"Use the given I<string> for commenting and uncommenting lines.  If the "
+"string contains a vertical bar or pipe character (B<|>), this designates "
+"bracket-style comments; for example, \"B</*|*/>\" for CSS files.  The "
+"characters before the pipe are prepended to the line and the characters "
+"after the pipe are appended at the end of the line.  If no pipe character is "
+"present, the full string is prepended; for example, \"B<#>\" for Python "
+"files.  If empty double quotes are specified, the comment/uncomment function "
+"is disabled; for example, \"\" for JSON.  The default value is \"B<#>\"."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:389
+#, no-wrap
+msgid "B<color >I<fgcolor>B<,>I<bgcolor>B< \">I<regex>B<\" >..."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:402
+msgid ""
+"Display all pieces of text that match the extended regular expression "
+"I<regex> with foreground color I<fgcolor> and background color I<bgcolor>, "
+"at least one of which must be specified.  Valid names for foreground and "
+"background colors are: B<white>, B<black>, B<blue>, B<green>, B<red>, "
+"B<cyan>, B<yellow>, B<magenta>, and B<normal> -- where B<normal> means the "
+"default foreground or background color.  You may use the prefix B<bright> to "
+"get a stronger color highlight for the foreground.  If your terminal "
+"supports transparency, not specifying a I<bgcolor> tells B<nano> to attempt "
+"to use a transparent background."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:402
+#, no-wrap
+msgid "B<icolor >I<fgcolor>B<,>I<bgcolor>B< \">I<regex>B<\" >..."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:405 ../nanorc.5:417
+msgid "Same as above, except that the matching is case insensitive."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:405
+#, no-wrap
+msgid "B<color >I<fgcolor>B<,>I<bgcolor>B< start=\">I<fromrx>B<\" end=\">I<torx>B<\">"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:414
+msgid ""
+"Display all pieces of text whose start matches extended regular expression "
+"I<fromrx> and whose end matches extended regular expression I<torx> with "
+"foreground color I<fgcolor> and background color I<bgcolor>, at least one of "
+"which must be specified.  This means that, after an initial instance of "
+"I<fromrx>, all text until the first instance of I<torx> will be colored.  "
+"This allows syntax highlighting to span multiple lines."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:414
+#, no-wrap
+msgid "B<icolor >I<fgcolor>B<,>I<bgcolor>B< start=\">I<fromrx>B<\" end=\">I<torx>B<\">"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:417
+#, no-wrap
+msgid "B<include \">I<syntaxfile>B<\">"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:422
+msgid ""
+"Read in self-contained color syntaxes from I<syntaxfile>.  Note that "
+"I<syntaxfile> may contain only the above commands, from B<syntax> to "
+"B<icolor>."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:422
+#, no-wrap
+msgid "B<extendsyntax>I< name command >[I<arg >...]"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:430
+msgid ""
+"Extend the syntax previously defined as I<name> with another I<command>.  "
+"This allows adding a new B<color>, B<icolor>, B<header>, B<magic>, "
+"B<comment>, or B<linter> command to an already defined syntax -- useful when "
+"you want to slightly improve a syntax defined in one of the system-installed "
+"files (which normally are not writable)."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:437
+msgid ""
+"Note: the B<formatter> command has been removed.  It was superseded by a "
+"more general mechanism: the filtering of buffer or marked text through an "
+"external command.  Such filtering is done by typing B<^R^X> and then "
+"preceding your formatter command with the pipe symbol (B<|>).  It has the "
+"added advantage that the operation can be undone."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:440
+msgid ""
+"If you use such a formatting command regularly, you could assign the "
+"relevant series of keystrokes to a single key in your nanorc:"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:443
+msgid "B<bind M-F \"^R^X|yourformatcommand^M\" main>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:447
+msgid ""
+"(Note that the B<^R>, B<^X>, and B<^M> are each a single, literal control "
+"character.  You can enter them by preceding each with B<M-V>.)"
+msgstr ""
+
+#. type: SH
+#: ../nanorc.5:448
+#, no-wrap
+msgid "REBINDING KEYS"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:450
+msgid "Key bindings can be changed via the following three commands:"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:451
+#, no-wrap
+msgid "B<bind>I< key function menu>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:456
+msgid ""
+"Rebinds the key I<key> to a new function named I<function> in the context of "
+"menu I<menu> (or in all menus where the function exists by using B<all>)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:456
+#, no-wrap
+msgid "B<bind>I< key >B<\">I<string>B<\">I< menu>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:463
+msgid ""
+"Makes the given I<key> produce the given I<string> in the given I<menu> (or "
+"in all menus where the key exists when B<all> is used).  The I<string> can "
+"consist of text or commands or a mix of them.  (To enter a command into the "
+"I<string>, precede its keystroke with B<M-V>.)"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:464
+#, no-wrap
+msgid "B<unbind>I< key menu>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:468
+msgid ""
+"Unbinds the key I<key> from the menu named I<menu> (or from all menus where "
+"it exists by using B<all>)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:470
+#, no-wrap
+msgid "The format of I<key> should be one of:"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:473
+#, no-wrap
+msgid "B<^>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:478
+msgid ""
+"followed by a Latin letter, by one of several ASCII characters (@, ], \\e, "
+"^, or _), or by the word \"Space\".  Example: ^C."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:478
+#, no-wrap
+msgid "B<M->"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:482
+msgid ""
+"followed by any ASCII character except [, or by the word \"Space\".  "
+"Example: M-C."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:482
+#, no-wrap
+msgid "B<F>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:486
+msgid "followed by a numeric value from 1 to 16.  Example: F10."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:486
+#, no-wrap
+msgid "the word \"Ins\" or the word \"Del\"."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:490
+#, no-wrap
+msgid "Valid I<function> names to be bound are:"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:493 ../nanorc.5:849
+#, no-wrap
+msgid "B<help>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:496
+msgid "Invokes the help viewer."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:496
+#, no-wrap
+msgid "B<cancel>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:499
+msgid "Cancels the current command."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:499
+#, no-wrap
+msgid "B<exit>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:502
+msgid "Exits from the program (or from the help viewer or the file browser)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:502 ../nanorc.5:840
+#, no-wrap
+msgid "B<writeout>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:505
+msgid "Writes the current buffer to disk, asking for a name."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:505
+#, no-wrap
+msgid "B<savefile>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:508
+msgid "Writes the current file to disk without prompting."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:508 ../nanorc.5:843
+#, no-wrap
+msgid "B<insert>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:512
+msgid ""
+"Inserts a file into the current buffer (at the current cursor position), or "
+"into a new buffer when option B<multibuffer> is set."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:512
+#, no-wrap
+msgid "B<whereis>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:516
+msgid ""
+"Starts a forward search for text in the current buffer -- or for filenames "
+"matching a string in the current list in the file browser."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:516
+#, no-wrap
+msgid "B<wherewas>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:520
+msgid ""
+"Starts a backward search for text in the current buffer -- or for filenames "
+"matching a string in the current list in the file browser."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:520
+#, no-wrap
+msgid "B<findprevious>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:523
+msgid "Searches the next occurrence in the backward direction."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:523
+#, no-wrap
+msgid "B<findnext>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:526
+msgid "Searches the next occurrence in the forward direction."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:526 ../nanorc.5:828
+#, no-wrap
+msgid "B<replace>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:529
+msgid "Interactively replaces text within the current buffer."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:529
+#, no-wrap
+msgid "B<cut>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:532
+msgid "Cuts and stores the current line (or the marked region)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:532
+#, no-wrap
+msgid "B<copy>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:535
+msgid "Copies the current line (or the marked region) without deleting it."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:535
+#, no-wrap
+msgid "B<paste>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:539
+msgid ""
+"Pastes the currently stored text into the current buffer at the current "
+"cursor position."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:539
+#, no-wrap
+msgid "B<zap>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:543
+msgid ""
+"Throws away the current line (or the marked region).  (This function is "
+"bound by default to E<lt>Meta+DeleteE<gt>.)"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:543
+#, no-wrap
+msgid "B<chopwordleft>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:549
+msgid ""
+"Deletes from the cursor position to the beginning of the preceding word.  "
+"(This function is bound by default to E<lt>Shift+Ctrl+DeleteE<gt>.  If your "
+"terminal produces B<^H> for E<lt>Ctrl+BackspaceE<gt>, you can make E<lt>Ctrl"
+"+BackspaceE<gt> delete the word to the left of the cursor by rebinding ^H to "
+"this function.)"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:549
+#, no-wrap
+msgid "B<chopwordright>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:553
+msgid ""
+"Deletes from the cursor position to the beginning of the next word.  (This "
+"function is bound by default to E<lt>Ctrl+DeleteE<gt>.)"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:553
+#, no-wrap
+msgid "B<cutrestoffile>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:556
+msgid "Cuts all text from the cursor position till the end of the buffer."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:556
+#, no-wrap
+msgid "B<mark>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:560
+msgid ""
+"Sets the mark at the current position, to start selecting text.  Or, when it "
+"is set, unsets the mark."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:560
+#, no-wrap
+msgid "B<curpos>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:563
+msgid ""
+"Shows the current cursor position: the line, column, and character positions."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:563
+#, no-wrap
+msgid "B<wordcount>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:566
+msgid "Counts the number of words, lines and characters in the current buffer."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:566
+#, no-wrap
+msgid "B<speller>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:570
+msgid ""
+"Invokes a spell-checking program, either the default one, or the one defined "
+"by B<--speller> or B<set speller>."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:570 ../nanorc.5:855
+#, no-wrap
+msgid "B<linter>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:573
+msgid "Invokes a syntax-checking program (if the active syntax defines one)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:573
+#, no-wrap
+msgid "B<justify>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:579
+msgid ""
+"Justifies the current paragraph.  A paragraph is a group of contiguous lines "
+"that, apart from possibly the first line, all have the same indentation.  "
+"The beginning of a paragraph is detected by either this lone line with a "
+"differing indentation or by a preceding blank line."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:579
+#, no-wrap
+msgid "B<fulljustify>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:582
+msgid "Justifies the entire current buffer."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:582
+#, no-wrap
+msgid "B<indent>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:585
+msgid "Indents (shifts to the right) the currently marked text."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:585
+#, no-wrap
+msgid "B<unindent>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:588
+msgid "Unindents (shifts to the left) the currently marked text."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:588
+#, no-wrap
+msgid "B<comment>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:592
+msgid ""
+"Comments or uncomments the current line or marked lines, using the comment "
+"style specified in the active syntax."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:592
+#, no-wrap
+msgid "B<complete>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:596
+msgid ""
+"Completes the fragment before the cursor to a full word found elsewhere in "
+"the current buffer."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:596
+#, no-wrap
+msgid "B<left>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:599
+msgid "Goes left one position (in the editor or browser)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:599
+#, no-wrap
+msgid "B<right>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:602
+msgid "Goes right one position (in the editor or browser)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:602
+#, no-wrap
+msgid "B<up>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:605
+msgid "Goes one line up (in the editor or browser)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:605
+#, no-wrap
+msgid "B<down>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:608
+msgid "Goes one line down (in the editor or browser)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:608
+#, no-wrap
+msgid "B<scrollup>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:612
+msgid ""
+"Scrolls the viewport up one row (meaning that the text slides down)  while "
+"keeping the cursor in the same text position, if possible."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:612
+#, no-wrap
+msgid "B<scrolldown>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:616
+msgid ""
+"Scrolls the viewport down one row (meaning that the text slides up)  while "
+"keeping the cursor in the same text position, if possible."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:616
+#, no-wrap
+msgid "B<prevword>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:619
+msgid "Moves the cursor to the beginning of the previous word."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:619
+#, no-wrap
+msgid "B<nextword>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:622
+msgid "Moves the cursor to the beginning of the next word."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:622
+#, no-wrap
+msgid "B<home>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:625
+msgid "Moves the cursor to the beginning of the current line."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:625
+#, no-wrap
+msgid "B<end>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:628
+msgid "Moves the cursor to the end of the current line."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:628
+#, no-wrap
+msgid "B<beginpara>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:631
+msgid "Moves the cursor to the beginning of the current paragraph."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:631
+#, no-wrap
+msgid "B<endpara>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:634
+msgid "Moves the cursor to the end of the current paragraph."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:634
+#, no-wrap
+msgid "B<prevblock>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:638
+msgid ""
+"Moves the cursor to the beginning of the current or preceding block of "
+"text.  (Blocks are separated by one or more blank lines.)"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:638
+#, no-wrap
+msgid "B<nextblock>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:641
+msgid "Moves the cursor to the beginning of the next block of text."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:641
+#, no-wrap
+msgid "B<pageup>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:644
+msgid "Goes up one screenful."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:644
+#, no-wrap
+msgid "B<pagedown>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:647
+msgid "Goes down one screenful."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:647
+#, no-wrap
+msgid "B<firstline>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:650
+msgid "Goes to the first line of the file."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:650
+#, no-wrap
+msgid "B<lastline>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:653
+msgid "Goes to the last line of the file."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:653 ../nanorc.5:837
+#, no-wrap
+msgid "B<gotoline>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:657
+msgid ""
+"Goes to a specific line (and column if specified).  Negative numbers count "
+"from the end of the file (and end of the line)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:657
+#, no-wrap
+msgid "B<findbracket>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:661
+msgid ""
+"Moves the cursor to the bracket (brace, parenthesis, etc.) that matches "
+"(pairs) with the one under the cursor."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:661
+#, no-wrap
+msgid "B<prevbuf>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:664
+msgid ""
+"Switches to editing/viewing the previous buffer when multiple buffers are "
+"open."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:664
+#, no-wrap
+msgid "B<nextbuf>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:667
+msgid ""
+"Switches to editing/viewing the next buffer when multiple buffers are open."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:667
+#, no-wrap
+msgid "B<verbatim>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:670
+msgid "Inserts the next keystroke verbatim into the file."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:670
+#, no-wrap
+msgid "B<tab>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:673
+msgid "Inserts a tab at the current cursor location."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:673
+#, no-wrap
+msgid "B<enter>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:676
+msgid "Inserts a new line below the current one."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:676
+#, no-wrap
+msgid "B<delete>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:679
+msgid "Deletes the character under the cursor."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:679
+#, no-wrap
+msgid "B<backspace>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:682
+msgid "Deletes the character before the cursor."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:682
+#, no-wrap
+msgid "B<recordmacro>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:686
+msgid ""
+"Starts the recording of keystrokes -- the keystrokes are stored as a macro.  "
+"When already recording, the recording is stopped."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:686
+#, no-wrap
+msgid "B<runmacro>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:689
+msgid "Replays the keystrokes of the last recorded macro."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:689
+#, no-wrap
+msgid "B<undo>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:692
+msgid "Undoes the last performed text action (add text, delete text, etc)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:692
+#, no-wrap
+msgid "B<redo>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:695
+msgid "Redoes the last undone action (i.e., it undoes an undo)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:695
+#, no-wrap
+msgid "B<refresh>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:698
+msgid "Refreshes the screen."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:698
+#, no-wrap
+msgid "B<suspend>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:702
+msgid ""
+"Suspends the editor (if the suspending function is enabled, see the "
+"\"suspendenable\" entry below)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:702
+#, no-wrap
+msgid "B<casesens>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:706
+msgid ""
+"Toggles whether searching/replacing ignores or respects the case of the "
+"given characters."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:706
+#, no-wrap
+msgid "B<regexp>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:709
+msgid ""
+"Toggles whether searching/replacing uses literal strings or regular "
+"expressions."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:709
+#, no-wrap
+msgid "B<backwards>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:712
+msgid "Toggles whether searching/replacing goes forward or backward."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:712
+#, no-wrap
+msgid "B<older>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:715
+msgid "Retrieves the previous (earlier) entry at a prompt."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:715
+#, no-wrap
+msgid "B<newer>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:718
+msgid "Retrieves the next (later) entry at a prompt."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:718
+#, no-wrap
+msgid "B<flipreplace>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:721
+msgid "Toggles between searching for something and replacing something."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:721
+#, no-wrap
+msgid "B<flipgoto>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:724
+msgid "Toggles between searching for text and targeting a line number."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:724
+#, no-wrap
+msgid "B<flipexecute>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:727
+msgid "Toggles between inserting a file and executing a command."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:727
+#, no-wrap
+msgid "B<flippipe>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:731
+msgid ""
+"When executing a command, toggles whether the current buffer (or marked "
+"region) is piped to the command."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:731
+#, no-wrap
+msgid "B<flipnewbuffer>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:735
+msgid ""
+"Toggles between inserting into the current buffer and into a new empty "
+"buffer."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:735
+#, no-wrap
+msgid "B<flipconvert>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:739
+msgid ""
+"When reading in a file, toggles between converting and not converting it "
+"from DOS/Mac format.  Converting is the default."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:739
+#, no-wrap
+msgid "B<dosformat>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:742
+msgid "When writing a file, switches to writing a DOS format (CR/LF)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:742
+#, no-wrap
+msgid "B<macformat>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:745
+msgid "When writing a file, switches to writing a Mac format."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:745
+#, no-wrap
+msgid "B<append>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:748
+msgid "When writing a file, appends to the end instead of overwriting."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:748
+#, no-wrap
+msgid "B<prepend>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:751
+msgid ""
+"When writing a file, 'prepends' (writes at the beginning) instead of "
+"overwriting."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:751
+#, no-wrap
+msgid "B<backup>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:754
+msgid "When writing a file, creates a backup of the current file."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:754
+#, no-wrap
+msgid "B<discardbuffer>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:759
+msgid ""
+"When about to write a file, discard the current buffer without saving.  "
+"(This function is bound by default only when option B<--tempfile> is in "
+"effect.)"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:759 ../nanorc.5:858
+#, no-wrap
+msgid "B<browser>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:762
+msgid "Starts the file browser, allowing to select a file from a list."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:762 ../nanorc.5:864
+#, no-wrap
+msgid "B<gotodir>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:766
+msgid ""
+"Goes to a directory to be specified, allowing to browse anywhere in the "
+"filesystem."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:766
+#, no-wrap
+msgid "B<firstfile>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:769
+msgid ""
+"Goes to the first file when using the file browser (reading or writing "
+"files)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:769
+#, no-wrap
+msgid "B<lastfile>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:772
+msgid ""
+"Goes to the last file when using the file browser (reading or writing files)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:772
+#, no-wrap
+msgid "B<nohelp>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:775
+msgid ""
+"Toggles the presence of the two-line list of key bindings at the bottom of "
+"the screen."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:775
+#, no-wrap
+msgid "B<constantshow>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:778
+msgid ""
+"Toggles the constant display of the current line, column, and character "
+"positions."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:778
+#, no-wrap
+msgid "B<smoothscroll>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:781
+msgid "Toggles smooth scrolling (when moving around with the arrow keys)."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:781
+#, no-wrap
+msgid "B<softwrap>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:784
+msgid "Toggles the displaying of overlong lines on multiple screen lines."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:784
+#, no-wrap
+msgid "B<linenumbers>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:787
+msgid "Toggles the display of line numbers in front of the text."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:787
+#, no-wrap
+msgid "B<whitespacedisplay>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:790
+msgid "Toggles the showing of whitespace."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:790
+#, no-wrap
+msgid "B<nosyntax>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:793
+msgid "Toggles syntax highlighting."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:793
+#, no-wrap
+msgid "B<smarthome>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:796
+msgid "Toggles the smartness of the Home key."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:796
+#, no-wrap
+msgid "B<autoindent>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:801
+msgid ""
+"Toggles whether a newly created line will contain the same amount of leading "
+"whitespace as the preceding line -- or as the next line if the preceding "
+"line is the beginning of a paragraph."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:801
+#, no-wrap
+msgid "B<cutfromcursor>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:805
+msgid ""
+"Toggles whether cutting text will cut the whole line or just from the "
+"current cursor position to the end of the line."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:805
+#, no-wrap
+msgid "B<nowrap>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:808
+msgid "Toggles whether long lines will be hard-wrapped to the next line."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:808
+#, no-wrap
+msgid "B<tabstospaces>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:811
+msgid "Toggles whether typed tabs will be converted to spaces."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:811
+#, no-wrap
+msgid "B<mouse>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:814
+msgid "Toggles mouse support."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:814
+#, no-wrap
+msgid "B<suspendenable>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:817
+msgid ""
+"Toggles whether the suspend sequence (normally ^Z) will suspend the editor "
+"window."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:819
+#, no-wrap
+msgid "Valid I<menu> sections are:"
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:822
+#, no-wrap
+msgid "B<main>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:825
+msgid "The main editor window where text is entered and edited."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:825
+#, no-wrap
+msgid "B<search>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:828
+msgid "The search menu (AKA whereis)."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:831
+msgid "The 'search to replace' menu."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:831
+#, no-wrap
+msgid "B<replacewith>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:834
+msgid "The 'replace with' menu, which comes up after 'search to replace'."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:834
+#, no-wrap
+msgid "B<yesno>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:837
+msgid "The 'yesno' menu, where the Yes/No/All/Cancel question is asked."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:840
+msgid "The 'goto line (and column)' menu."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:843
+msgid "The 'write file' menu."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:846
+msgid "The 'insert file' menu."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:846
+#, no-wrap
+msgid "B<extcmd>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:849
+msgid ""
+"The menu for inserting output from an external command, reached from the "
+"insert menu."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:852
+msgid "The help-viewer menu."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:852
+#, no-wrap
+msgid "B<spell>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:855
+msgid "The interactive spell checker Yes/no menu."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:858
+msgid "The linter menu."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:861
+msgid "The file browser for inserting or writing a file."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:861
+#, no-wrap
+msgid "B<whereisfile>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:864
+msgid "The 'search for a file' menu in the file browser."
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:867
+msgid "The 'go to directory' menu in the file browser."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:867
+#, no-wrap
+msgid "B<all>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:872
+msgid ""
+"A special name that encompasses all menus.  For B<bind> it means all menus "
+"where the specified I<function> exists; for B<unbind> it means all menus "
+"where the specified I<key> exists."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:875
+#, fuzzy, no-wrap
+#| msgid "B</etc/nanorc>"
+msgid "I</etc/nanorc>"
+msgstr "B</etc/nanorc>"
+
+#. type: Plain text
+#: ../nanorc.5:878
+msgid "System-wide configuration file."
+msgstr ""
+
+#. type: TP
+#: ../nanorc.5:878
+#, no-wrap
+msgid "I<~/.nanorc> or I<$XDG_CONFIG_HOME/nano/nanorc> or I<~/.config/nano/nanorc>"
+msgstr ""
+
+#. type: Plain text
+#: ../nanorc.5:881
+msgid "Per-user configuration file."
+msgstr ""
+
+#~ msgid "August 2014"
+#~ msgstr "Août 2014"
+
+#~ msgid ""
+#~ "B<nano> is a small, free and friendly editor which aims to replace Pico, "
+#~ "the default editor included in the non-free Pine package.  On top of "
+#~ "copying Pico's look and feel, B<nano> also implements some missing (or "
+#~ "disabled by default) features in Pico, such as \"search and replace\" and "
+#~ "\"go to line and column number\"."
+#~ msgstr ""
+#~ "B<nano> est un éditeur petit, sympathique et libre, qui vise à remplacer "
+#~ "Pico, l'éditeur par défaut du logiciel non libre Pine. B<nano> ne se "
+#~ "contentant pas de copier l'interface et l'ergonomie de Pico, il offre "
+#~ "également certaines fonctions manquantes (ou désactivées par défaut) dans "
+#~ "Pico. Ces fonctionnalités sont, par exemple, les fonctions de recherche "
+#~ "et de remplacement, et la possibilité de sauter directement à une ligne "
+#~ "et à une colonne précise."
+
+#~ msgid "B<+>I<line>B<,>I<column>"
+#~ msgstr "B<+>I<LIGNE>B<,>I<COLONNE>"
+
+#~ msgid ""
+#~ "Places the cursor on line number I<line> and at column number I<column> "
+#~ "(at least one of which must be specified) on startup, instead of the "
+#~ "default line 1, column 1."
+#~ msgstr ""
+#~ "Démarre avec le curseur positionné à la colonne I<COLONNE> de la ligne "
+#~ "I<LIGNE> (l'un des deux, au moins, devant être spécifié) au lieu de "
+#~ "démarrer à la colonne 1, ligne 1."
+
+#~ msgid ""
+#~ "Set the directory where B<nano> puts unique backup files, if file backups "
+#~ "are enabled."
+#~ msgstr ""
+#~ "Définit le répertoire utilisé par B<nano> pour enregistrer les copies de "
+#~ "sécurité uniques si celles-ci sont activées."
+
+#~ msgid "B<~/.nanorc>"
+#~ msgstr "B<~/.nanorc>"
+
+#~ msgid "April 2014"
+#~ msgstr "April 2014"
+
+#~ msgid "Online Help"
+#~ msgstr "Online-Hilfe"
+
+#~ msgid "main"
+#~ msgstr "main"
+
+#~ msgid "search"
+#~ msgstr "search"
+
+#~ msgid "replacewith"
+#~ msgstr "replacewith"
+
+#~ msgid "extcmd"
+#~ msgstr "extcmd"
+
+#~ msgid "spell"
+#~ msgstr "spell"
+
+#~ msgid "linter"
+#~ msgstr "linter"
+
+#~ msgid "browser"
+#~ msgstr "browser"
+
+#~ msgid "whereisfile"
+#~ msgstr "whereisfile"
+
+#~ msgid "gotodir"
+#~ msgstr "gotodir"
+
+#~ msgid "all"
+#~ msgstr "all"
+
+#~ msgid "The File Browser"
+#~ msgstr "Der Dateibrowser"
+
+#~ msgid "Pico Compatibility"
+#~ msgstr "Pico-Kompatibilität"
+
+#~ msgid "cd nano-x.y.z/"
+#~ msgstr "cd nano-x.y.z/"
+
+#~ msgid "./configure"
+#~ msgstr "./configure"
+
+#~ msgid "make"
+#~ msgstr "make"
+
+#~ msgid "make install"
+#~ msgstr "make install"
+
+#~ msgid "--disable-browser"
+#~ msgstr "--disable-browser"
+
+#~ msgid "--disable-color"
+#~ msgstr "--disable-color"
+
+#~ msgid "--disable-extra"
+#~ msgstr "--disable-extra"
+
+#~ msgid "--disable-help"
+#~ msgstr "--disable-help"
+
+#~ msgid "--disable-justify"
+#~ msgstr "--disable-justify"
+
+#~ msgid "--disable-libmagic"
+#~ msgstr "--disable-libmagic"
+
+#~ msgid "--disable-mouse"
+#~ msgstr "--disable-mouse"
+
+#~ msgid "--disable-nanorc"
+#~ msgstr "--disable-nanorc"
+
+#~ msgid "--disable-operatingdir"
+#~ msgstr "--disable-operatingdir"
+
+#~ msgid "--disable-speller"
+#~ msgstr "--disable-speller"
+
+#~ msgid "--disable-tabcomp"
+#~ msgstr "--disable-tabcomp"
+
+#~ msgid "--disable-wrapping"
+#~ msgstr "--disable-wrapping"
+
+#~ msgid "--enable-tiny"
+#~ msgstr "--enable-tiny"
+
+#~ msgid "--enable-debug"
+#~ msgstr "--enable-debug"
+
+#~ msgid "--disable-nls"
+#~ msgstr "--disable-nls"
+
+#~ msgid "--disable-wrapping-as-root"
+#~ msgstr "--disable-wrapping-as-root"
+
+#~ msgid "--enable-utf8"
+#~ msgstr "--enable-utf8"
+
+#~ msgid "--disable-utf8"
+#~ msgstr "--disable-utf8"
+
+#~ msgid "--with-slang"
+#~ msgstr "--with-slang"
